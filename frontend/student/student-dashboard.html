@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">CECS Co-op</div>
+      <nav>
+        <ul>
+          <li><a href="student-dashboard.html" class="active">Dashboard</a></li>
+          <li><a href="student-profile.html">Profile</a></li>
+          <li><a href="student-search.html">Search Internships</a></li>
+          <li><a href="student-applications.html">My Applications</a></li>
+          <li><a href="student-summary.html">Co-op Summary</a></li>
+          <li><a href="../index.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Dashboard -->
+    <main class="dashboard">
+      <header class="topbar">
+        <h1>Welcome, Jane Doe</h1>
+        <p>Student Dashboard</p>
+      </header>
+
+      <!-- Summary Cards -->
+      <section class="dashboard-cards">
+        <div class="card stat-card">
+          <p class="card-title">Internship Applications</p>
+          <h2 id="applicationCount">3 Active Applications</h2>
+        </div>
+        
+        <div class="card stat-card">
+          <p class="card-title">Eligibility Status</p>
+          <h2 id="eligibilityText">Eligible</h2>
+        </div>
+        
+        <div class="card stat-card">
+          <p class="card-title">Co-op Summary</p>
+          <h2 id="summaryStatus">Pending Submission</h2>
+        </div>
+
+        <!-- NEW: Co-op Credit Interest Card -->
+        <div class="card stat-card" id="coopInterestCard" style="display: none;">
+          <p class="card-title">Co-op Credit</p>
+          <button class="btn" id="expressInterestBtn">Yes, I want to earn co-op credit</button>
+          <p id="interestMessage" style="margin-top: 0.5rem;"></p>
+        </div>
+      </section>
+
+      <!-- Applications Table -->
+      <section class="card">
+        <div class="card-header">
+          <h3>Recent Applications</h3>
+          <a href="student-applications.html" class="btn">View All Applications</a>
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Position Title</th>
+              <th>Employer</th>
+              <th>Status</th>
+              <th>Date Applied</th>
+            </tr>
+          </thead>
+          <tbody id="applicationTableBody">
+            <tr>
+              <td><strong>Software Intern</strong></td>
+              <td>Ford Motor Co.</td>
+              <td><span class="badge pending">Pending</span></td>
+              <td>09/25/25</td>
+            </tr>
+            <tr>
+              <td><strong>Web Dev Intern</strong></td>
+              <td>GM</td>
+              <td><span class="badge accepted">Accepted</span></td>
+              <td>09/18/25</td>
+            </tr>
+            <tr>
+              <td><strong>IT Support Co-op</strong></td>
+              <td>Bosch</td>
+              <td><span class="badge rejected">Rejected</span></td>
+              <td>09/10/25</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/student-dashboard.js"></script>
+  <script src="../js/logout.js"></script>
+</body>
+</html>

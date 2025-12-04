@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Applications</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+     <aside class="sidebar">
+      <div class="logo">CECS Co-op</div>
+      <nav>
+        <ul>
+          <li><a href="student-dashboard.html">Dashboard</a></li>
+          <li><a href="student-profile.html">Profile</a></li>
+          <li><a href="student-search.html">Search Internships</a></li>
+          <li><a href="student-applications.html" class="active">My Applications</a></li>
+          <li><a href="student-summary.html">Co-op Summary</a></li>
+          <li><a href="index.html">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Applications List -->
+    <main class="dashboard">
+      <header class="topbar">
+        <h1>My Applications</h1>
+        <p>Internships you’ve applied to</p>
+      </header>
+
+      <section class="search-results" id="appliedResults">
+        <!-- Injected via JS -->
+      </section>
+    </main>
+  </div>
+
+  <script src="js/student-applications.js"></script>
+  <script src="../js/logout.js"></script>
+</body>
+</html>
