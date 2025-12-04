@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Employer Dashboard</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">CECS Co-op Portal</div>
+      <nav>
+        <ul>
+          <li><a href="employer-dashboard.html" class="active">Dashboard</a></li>
+          <li><a href="employer-profile.html">Company Profile</a></li>
+          <li><a href="post-internship.html">Post Internships</a></li>
+          <li><a href="manage-applications.html">Manage Applications</a></li>
+          <li><a href="view-candidates.html">View Candidates</a></li>
+          <li><a href="coop-offers.html">Co-op Offers</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="../index.html">Log Out</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Dashboard -->
+    <main class="dashboard">
+      <header class="topbar">
+        <h1>Welcome back, HR Team!</h1>
+        <p>Employer Dashboard</p>
+      </header>
+
+      <!-- Summary Cards -->
+      <section class="dashboard-cards">
+        <div class="card stat-card">
+          <p class="card-title">Active Postings</p>
+          <h2 id="openCount">0 Positions<br>Open</h2>
+        </div>
+
+        <div class="card stat-card">
+          <p class="card-title">Pending Applications</p>
+          <h2 id="pendingCount" style="color: #FFA500;">0 Awaiting<br>Review</h2>
+        </div>
+
+        <div class="card stat-card">
+          <p class="card-title">Positions Filled</p>
+          <h2 id="closedCount">0 Positions<br>Filled</h2>
+        </div>
+      </section>
+
+      <!-- Job Postings Table -->
+      <section class="card">
+        <div class="card-header">
+          <h3>Recent Job Postings</h3>
+          <a href="post-internship.html" class="btn">+ New Posting</a>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Position Title</th>
+              <th>Status</th>
+              <th>Applicants</th>
+              <th>Last Updated</th>
+            </tr>
+          </thead>
+          <tbody id="jobsTableBody">
+            <!-- Dynamic content loaded via JS -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/employer-dashboard.js"></script>
+  <script src="../js/logout.js"></script>
+</body>
+</html>

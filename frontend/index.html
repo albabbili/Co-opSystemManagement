@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CECS Co-op Login</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="profile-form" style="max-width: 400px; margin: 5rem auto;">
+    <h1 style="text-align:center; margin-bottom: 1rem;">CECS Co-op Portal</h1>
+    <form id="loginForm">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="role">Login As</label>
+        <select id="role" required>
+          <option value="">Select role</option>
+          <option value="student">Student</option>
+          <option value="employer">Employer</option>
+          <option value="faculty">Faculty</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn">Login</button>
+      <p id="loginMessage" style="margin-top: 1rem; color: red;"></p>
+    </form>
+  </main>
+
+  <script src="js/login.js"></script>
+</body>
+</html>
