@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>View Students</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">CECS Co-op Portal</div>
+      <nav>
+        <ul>
+          <li><a href="faculty-dashboard.html">Dashboard</a></li>
+          <li><a href="faculty-students.html" class="active">View Students</a></li>
+          <li><a href="faculty-summaries.html">Review Summaries</a></li>
+          <li><a href="faculty-grades.html">Enter Grades</a></li>
+          <li><a href="faculty-reports.html">Reports</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="../index.html">Log Out</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard">
+      <header class="topbar">
+        <h1>Students Overview</h1>
+        <p>List of students in the Co-op Program</p>
+      </header>
+
+      <section class="table-section">
+        <div class="card-header">
+          <h3>Student Information</h3>
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Major</th>
+              <th>GPA</th>
+              <th>Credits</th>
+              <th>Eligibility</th>
+            </tr>
+          </thead>
+          <tbody id="studentsTableBody">
+            <!-- Populated via JS -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/faculty-students.js"></script>
+  <script src="../js/logout.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Faculty Dashboard</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">CECS Co-op Portal</div>
+      <nav>
+        <ul>
+          <li><a href="faculty-dashboard.html" class="active">Dashboard</a></li>
+          <li><a href="faculty-students.html">View Students</a></li>
+          <li><a href="faculty-summaries.html">Review Summaries</a></li>
+          <li><a href="faculty-grades.html">Enter Grades</a></li>
+          <li><a href="faculty-reports.html">Reports</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="../index.html">Log Out</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Dashboard -->
+    <main class="dashboard">
+      <header class="topbar">
+        <h1>Welcome back, Professor!</h1>
+        <p>Faculty Coordinator Dashboard</p>
+      </header>
+
+      <!-- Summary Cards -->
+      <section class="dashboard-cards">
+        <div class="card stat-card">
+          <p class="card-title">Active Co-ops</p>
+          <h2 id="activeCount">6 Active</h2>
+        </div>
+
+        <div class="card stat-card">
+          <p class="card-title">Pending Reviews</p>
+          <h2 id="pendingCount" style="color: #FFA500;">2 Awaiting<br>Review</h2>
+        </div>
+
+        <div class="card stat-card">
+          <p class="card-title">Completed Co-ops</p>
+          <h2 id="completedCount">8 Completed</h2>
+        </div>
+      </section>
+
+      <!-- Co-op Student Table -->
+      <section class="card">
+        <div class="card-header">
+          <h3>Student Co-op Status</h3>
+          <a href="faculty-summaries.html" class="btn">View All Summaries</a>
+        </div>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Student Name</th>
+              <th>Co-op Title</th>
+              <th>Status</th>
+              <th>Grade</th>
+            </tr>
+          </thead>
+          <tbody id="facultyTableBody">
+            <!-- Dynamic content from JS -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="../js/faculty-dashboard.js"></script>
+  <script src="../js/logout.js"></script>
+</body>
+</html>

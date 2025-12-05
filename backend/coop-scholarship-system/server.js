@@ -1,0 +1,33 @@
+require('dotenv').config();
+const express = require('express');
+const cors = require('cors');
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+app.use('/systemusers', require('./routes/systemUserRoutes'));
+app.use('/employers', require('./routes/employerRoutes'));
+app.use('/companies', require('./routes/companyRoutes'));
+app.use('/employercontacts', require('./routes/employerContactRoutes'));
+app.use('/departments', require('./routes/departmentRoutes'));
+app.use('/faculty', require('./routes/facultyRoutes'));
+app.use('/facultycontacts', require('./routes/facultyContactRoutes'));
+app.use('/students', require('./routes/studentRoutes'));
+app.use('/studentcontacts', require('./routes/studentContactRoutes'));
+app.use('/majors', require('./routes/majorRoutes'));
+app.use('/studentstandings', require('./routes/studentStandingRoutes'));
+app.use('/internships', require('./routes/internshipRoutes'));
+app.use('/internshipdescriptions', require('./routes/internshipDescriptionRoutes'));
+app.use('/internshipmajors', require('./routes/internshipMajorRoutes'));
+app.use('/skills', require('./routes/skillsRoutes'));
+app.use('/internshipskills', require('./routes/internshipSkillRoutes'));
+app.use('/internshipoffers', require('./routes/internshipOfferRoutes'));
+app.use('/studentapplications', require('./routes/studentApplicationRoutes'));
+app.use('/coopeligibility', require('./routes/coopEligibilityRoutes'));
+app.use('/coopsummaries', require('./routes/coopSummaryRoutes'));
+app.use('/coopgrades', require('./routes/coopGradesRoutes'));
+app.use('/coopsearch', require('./routes/coopSearchRoutes'));
+app.use('/auth', require('./routes/authRoutes'));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`API running on ${PORT}`));
