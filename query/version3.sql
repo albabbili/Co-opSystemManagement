@@ -173,7 +173,7 @@ CREATE TABLE IF NOT EXISTS CoopSearch(
 INSERT INTO SystemUser VALUES (100, 'johns@umich.edu', 'password123', 'Student');
 INSERT INTO SystemUser VALUES (101, 'alexm@umich.edu', 'securepass456', 'Faculty');
 INSERT INTO SystemUser VALUES (102, 'annaw@ford.com', 'auto789', 'Employer');
-INSERT INTO SystemUser VALUES (103, 'ryank@google.com', 'search101', 'Employeer');
+INSERT INTO SystemUser VALUES (103, 'ryank@google.com', 'search101', 'Employer');
 INSERT INTO SystemUser VALUES (104, 'Ericw@umich.edu', 'mypassword', 'Faculty');
 INSERT INTO SystemUser VALUES (105, 'samt@umich.edu', 'facultypass', 'Faculty');
 INSERT INTO SystemUser VALUES (106, 'debbiep@umich.edu', '123456', 'Faculty');
